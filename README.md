@@ -1,8 +1,9 @@
-# Controle-de-Estoque
-Sistema simples de controle de estoque, com opções para adicionar, listar, verificar preço e dispobilidadede de produtos.
+# Inventory-Control
 
-Fiz esse pequeno sistema com a intenção de criar um controle de estoque simples, porém escalavel. É possivel melhorar os filtros e as opções de acordo com a necessidade, basta apenas adicionar a opção na lista que a função opções recebe como parametro e criar a nova função para atender a necessidade.
+Simple inventory control system, with options to add, list, check prices, and product availability.
 
-Eu programo em python desde de o início de março de 2023, atualmente estamos em 23 de Junho de 2023, então peço que levem esta informação em consideração ao julgar o código, pois sei que ainda falta muita experiencia para otimiza-lo, mas considero já uma grande conquista.
+I created this small system with the intention of building a simple yet scalable inventory control. It's possible to improve the filters and options according to the need, just by adding the option to the list that the options function receives as a parameter and creating the new function to meet the requirement.
 
-Seguirei estudando e compartilhando novos projetos, me siga para acompanhar minha tragetoria.
+I have been programming in Python since the beginning of March 2023, and currently, it's June 23, 2023. So please take this information into account when judging the code, as I know there is still a lot of room for optimization, but I consider it a great achievement already.
+
+I will continue studying and sharing new projects. Follow me to keep up with my journey.
