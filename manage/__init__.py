@@ -71,37 +71,37 @@ def check_availability(text):
     return products(text)
 
 
-def manage_errors(text, tipo):
+def manage_errors(text, txt_type):
     while True:
         try:
-            element = tipo(input(text))
-            if tipo == str:
+            element = txt_type(input(text))
+            if txt_type == str:
                 for letra in element:
                     if letra in string.punctuation:
                         raise TypeError
                 if element.isdigit():
                     raise TypeError
                 element = ' '.join(element.split())
-            elif tipo == int:
+            elif txt_type == int:
                 if element < 0:
                     raise IndexError
         except (ValueError, TypeError):
             print('ERRO: O dado fornecido está incorreto!')
         except KeyboardInterrupt:
             print('O usuário solicitou interrupção.')
-            if tipo == str:
+            if txt_type == str:
                 return '<desconhecido>'
-            elif tipo == float:
+            elif txt_type == float:
                 return 0.0
-            elif tipo == int:
+            elif txt_type == int:
                 return 0
         except IndexError:
             print("ERRO: o valor informado é inválido.")
         except Exception as erro:
             print(f'ERRO: {erro.__class__}')
         else:
-            if type(element) == tipo:
-                return tipo(element)
+            if txt_type(element) == type:
+                return txt_type(element)
 
 
 def create_file():
