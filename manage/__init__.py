@@ -54,7 +54,15 @@ def add_products():
 
 
 def list_products():
-    file = open('Estoque.txt', 'rt')
+    while True:
+        try:
+            file = open('Estoque.txt', 'rt')
+        except FileNotFoundError:
+            create_file()
+        except Exception as erro:
+            print(f'ERRO: {erro.__class__}')
+        else:
+            break
     header('PRODUTOS EM ESTOQUE')
     for line, product in enumerate(file.readlines()):
         element = product.replace('\n', '').split(':')
@@ -124,6 +132,8 @@ def products(text):
             print('ERRO: Digite um número inteiro.')
         except IndexError:
             print('ERRO: Opção inválida')
+        except FileNotFoundError:
+            create_file()
         except KeyboardInterrupt:
             print('O usuário solicitou interrupção.')
             return True
