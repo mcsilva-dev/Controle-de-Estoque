@@ -1,16 +1,16 @@
-def cabeçalho(text):
-    print(linha())
+def header(text):
+    print(line())
     print(f'{text}'.center(50))
-    print(linha())
+    print(line())
 
 
-def linha(tam=50):
+def line(tam=50):
     return '-' * tam
 
 
-def opcoes(text):
-    from gerenciar import opcao
+def options(text):
+    from manage import option
     for x in range(0, len(text)):
         print(f"{x + 1} - {text[x]}")
-    print(linha())
-    return opcao(len(text))
+    print(line())
+    return option(len(text))
